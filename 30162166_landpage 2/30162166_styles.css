@@ -1,0 +1,209 @@
+/* Responsive logo */
+.responsive-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flexbox layout for feature section */
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #457068;
+}
+
+/*container color changhes */
+.container1 {
+    background-color: rgb(115, 168, 177);
+}
+
+.container2 {
+    background-color: cadetblue;
+}
+
+/* Responsive images */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Default company image styling for small screens */
+.company-image {
+    background-image: url('./images/image-small.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* Comapnyimages for different screen sizes */
+
+@media (min-width: 180px) {
+    .company-image {
+        background-image: url('./images/image-small.png');
+        height: 90px;
+
+
+    }
+}
+
+@media (min-width: 320px) {
+    .company-image {
+        background-image: url('./images/image-medium.png');
+        height: 160px;
+
+
+    }
+}
+
+/* Large screen breakpoint */
+@media (min-width: 640px) {
+    .company-image {
+        background-image: url('./images/image-large.png');
+        height: 320px;
+
+    }
+}
+
+
+/* Background images for different screen sizes */
+.hero-section {
+    position: relative;
+    background-image: url('./images/background-extra-small.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .hero-section {
+        background-image: url('./images/background-extra-small.jpg');
+
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .hero-section {
+        background-image: url('./images/background-small.jpg');
+
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-section {
+        background-image: url('./images/background-medium.jpg');
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .hero-section {
+        background-image: url('./images/background-large.jpg');
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .hero-section {
+        background-image: url('./images/background-extra-large.jpg');
+    }
+}
+
+
+
+
+/* Adding flourish using pseudo-element */
+.features-section::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+
+    left: 0px;
+
+    width: 3000px;
+    /* Increase the width for a larger size */
+    height: 200px;
+    /* Increase the height for a larger size */
+    background-image: url('./images/flourish.png');
+    background-size: contain;
+
+    background-repeat: repeat;
+
+    z-index: 0;
+    /* Ensures the pseudo-element is layered correctly */
+}
+
+/* logo position */
+
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 20%;
+    /* Flexible width for responsiveness */
+    height: auto;
+    z-index: 1;
+}
+
+/* Logo styling for responsiveness */
+.responsive-logo {
+    width: 100%;
+    /* The logo will fill the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-width: 150px;
+    /* Ensure the logo doesn't get too large */
+}
+
+.hero-section h1 {
+    color: rgba(189, 227, 218, 0.9);
+    text-shadow: 2px 2px 4px rgba(53, 189, 135, 0.7);
+
+}
+
+/* footer section and design changes */
+/* Button styling */
+.cta-button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: 2px solid #008CBA;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e2a64d;
+}
+
+.cta-section {
+    background-color: #c0e6e7;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.cta-section h2 {
+    color: rgb(18, 65, 73)
+}
+
+.cta-section p {
+    color: rgb(18, 65, 73)
+}
+
+.about-section {
+    background-color: #b0daf2;
+    padding: 20px;
+    text-align: center;
+
+
+}
+
+.about-section p {
+    color: rgb(18, 65, 73)
+}
